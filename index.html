@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+  <title>Fauna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2 class="logo">Fauna</h2>
+      <div class="text-sci">
+        <h2>Welcome To<br><span>The Social Media Of The Animal Kingdom</span></h2>
+        <p>Join us!</p>
+      </div>
+    </div>
+
+    <div class="logreg-box">
+      <div class="form-box login">
+        <form action="#" id="signin-form">
+          <h2>Sign In</h2>
+
+          <div class="input-box">
+            <span class="icon"><i class="uil uil-at"></i></span>
+            <input type="text" required id="username">
+            <label>Username</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class="uil uil-lock"></i></span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <button onclick="redirectToSecondProject()" class="btn">Sign In</button>
+          <div class="note">
+            <p>NB: Only Your Username Will Be Used</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signinForm = document.getElementById("signin-form");
+    const usernameInput = document.getElementById("username");
+
+    signinForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log(usernameInput.value);
+
+      function redirectToSecondProject() {
+        const username = document.getElementById("username").value;
+        const link = `https://fauna-animal-kingdom.netlify.app/home.html?username=${username}`;
+        window.location.href = link;
+      }
+
+      redirectToSecondProject();
+    });
+  </script>
+
+
+</body>
+
+</html>
