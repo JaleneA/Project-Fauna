@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Fauna - The Animal Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <h2 class="log">
+        Fauna
+      </h2>
+      <div class="search-bar">
+        <i class="uil uil-search"></i>
+        <input type="search" placeholder="Search for your beloved animals">
+      </div>
+      <button class="btn btn-primary" id="sign-out-button">Sign Out</button>
+
+    </div>
+  </nav>
+  <!---------------------------- MAIN -------------------->
+  <main>
+    <div class="container">
+      <!------------ LEFT -------------->
+      <div class="left">
+        <a class="profile">
+          <div class="profile-photo">
+            <img src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
+          </div>
+          <div class="handle">
+            <h4>Hello ʕᵔᴥᵔ○ʔ</h4>
+            <h4 id="username-display"></h4>
+            <p class="text-muted">
+              <span id="username">@username</span>
+            </p>
+          </div>
+        </a>
+
+        <!---------------------- SIDEBAR ------------------>
+        <div class="sidebar">
+          <a href="index.html" class="menu-item active">
+            <span><i class="uil uil-house-user"></i></span>
+            <h3>Home</h3>
+          </a>
+
+          <a class="menu-item">
+            <span><i class="uil uil-compass"></i></span>
+            <h3>Explore</h3>
+          </a>
+
+          <a class="menu-item" id="notifications">
+            <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+            <h3>Notifications</h3>
+            <!---- POPUP ---->
+            <div class="notifications-popup">
+              <div>
+                <div class="profile-photo">
+                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
+                </div>
+                <div class="notification body">
+                  <b>Name</b> accepted your friend request
+                  <small class="text-muted"> 2 DAYS AGO</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
+                </div>
+                <div class="notification body">
+                  <b>Name</b> accepted your friend request
+                  <small class="text-muted"> 2 DAYS AGO</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
+                </div>
+                <div class="notification body">
+                  <b>Name</b> accepted your friend request
+                  <small class="text-muted"> 2 DAYS AGO</small>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="forum.html" class="menu-item">
+            <span><i class="uil uil-comment-alt-dots"></i></span>
+            <h3>Discussions</h3>
+          </a>
+
+
+          <a class="menu-item" id="messages-notifications">
+            <span><i class="uil uil-envelope-alt"><small class="notification-count">5</small></i></span>
+            <h3>Messages</h3>
+          </a>
+
+          <a class="menu-item" id="theme">
+            <span><i class="uil uil-palette"></i></span>
+            <h3>Theme</h3>
+          </a>
+
+          <a class="menu-item">
+            <span><i class="uil uil-setting"></i></span>
+            <h3>Settings</h3>
+          </a>
+        </div>
+        <!--------------- END OF SIDEBAR --------------------->
+        <label for="create-post" class="btn btn-primary">Create Post</label>
+      </div>
+      <!------------ MIDDLE -------------->
+      <div class="middle">
+
+        <!--------- STORIES ----------->
+        <div class="stories">
+          <div class="story">
+            <div class="profile-photo">
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80">
+            </div>
+            <p class="name">Your Story</p>
+          </div>
+
+          <div class="story">
+            <div class="profile-photo">
+              <img
+                src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8zMTIyNjAwNi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY5OTY2MTQ4MH0.1PVYDbllnhhnjkRnR3Q61Ql01x-FwzMD54iezo4vcKM/img.jpg?width=980">
+            </div>
+            <p class="name">Pikachu</p>
+          </div>
+
+          <div class="story">
+            <div class="profile-photo">
+              <img
+                src="https://images.immediate.co.uk/production/volatile/sites/4/2022/06/GettyImages-1282300125-2f3f54a.jpg?quality=90&resize=768,574">
+            </div>
+            <p class="name">Elmo</p>
+          </div>
+
+          <div class="story">
+            <div class="profile-photo">
+              <img
+                src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </div>
+            <p class="name">Piplup</p>
+          </div>
+
+          <div class="story">
+            <div class="profile-photo">
+              <img src="https://ontariospca.ca/wp-content/uploads/2021/04/pexels-zen-chung-5749136.jpg">
+            </div>
+            <p class="name">Person4</p>
+          </div>
+
+          <div class="story">
+            <div class="profile-photo">
+              <img
+                src="https://th-thumbnailer.cdn-si-edu.com/HPJknxrd4UYT-wjN0a32vyr-0cQ=/1072x720/filters:no_upscale():focal(3008x2005:3009x2006)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/6b/c3/6bc305cb-95dd-4e22-b45b-108c6e218200/gettyimages-1144833913.jpg">
+            </div>
+            <p class="name">Person5</p>
+          </div>
+        </div>
+        <!------------ STORIES END --------->
+
+        <!----------- TO POST -------------->
+
+        <div class="create-post">
+          <input type="text" class="search-bar" placeholder="Have something to share?">
+          <label for="post-image" class="custom-file-upload" id="userpost">
+            <input type="file" name="post-image" id="post-image">
+            <i class="uil uil-plus-circle"></i>
+          </label>
+
+
+          <div id="upload-modal" class="popup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <div class="image-container">
+                <h2>Create new post</h2>
+                <img id="uploaded-image" src="" alt="">
+                <div class="caption-bar">
+                  <input type="text" placeholder="Add A Caption">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+
+        <!------------------- END TO POST ------------------------->
+
+        <!--------------- FEEDS - USING INSTAGRAMS BASIC DISPLAY API ------------------->
+        <div class="feeds">
+          <!--------------- FEED ------------------->
+          <div class="feed" id="media">
+          </div>
+          <!-------------- FEED END ----------------------->
+        </div>
+        <!-------------- MIDDLE END ----------------------->
+      </div>
+
+      <!------------ RIGHT -------------->
+      <div class="right">
+        <div class="hashtags">
+          <div class="heading">
+            <h4>#Hashtags</h4><i class="uil uil-filter"></i>
+          </div>
+          <!---------- SEARCH BAR --------------->
+          <div class="search-bar">
+            <i class="uil uil-search-alt"></i>
+            <input type="search" placeholder="Search hashtags" id="hashtag-search">
+          </div>
+          <!--------------------- HASHTAGS CATEGORY ---------------->
+          <div class="category">
+            <h6 class="active">Mammals</h6>
+            <h6>Birds</h6>
+            <h6>Reptiles</h6>
+          </div>
+          <!------------ HASHTAG ---------------->
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#CATS</p>
+          </div>
+          <div class="hashtag">
+            <p>#HORSES</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+          <div class="hashtag">
+            <p>#DOGS</p>
+          </div>
+        </div>
+        <!--------- MAMMALS END ------------->
+
+        <!----------- BIRDS ---------------->
+        <div class="birds-category">
+          <div class="category-container">
+            <div class="hashtag">
+              <p>#PARROTS</p>
+            </div>
+          </div>
+        </div>
+        <!----------- BIRDS ---------------->
+        <div class="reptiles-category">
+          <div class="category-container">
+            <div class="hashtag">
+              <p>#SNAKES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <!--------------- THEME CUSTOMIZATION -------------------------->
+  <div class="customize-theme">
+    <div class="card">
+      <h2>Purrfect Your View</h2>
+      <p class="text-muted">Manage your font size, colour, and background.</p>
+
+      <!--------------------- FONT SIZES ------------------------->
+      <div class="font-size">
+        <h4>Font Size</h4>
+        <div>
+          <h6>Aa</h6>
+          <div class="choose-size">
+            <span class="font-size-1"></span>
+            <span class="font-size-2 active"></span>
+            <span class="font-size-3"></span>
+            <span class="font-size-4"></span>
+            <span class="font-size-5"></span>
+          </div>
+          <h3>Aa</h3>
+        </div>
+      </div>
+
+      <!----------------PRIMARY COLOURS -------------------->
+      <div class="colour">
+        <h4>Colour</h4>
+        <div class="choose-colour">
+          <span class="colour-1 active"></span>
+          <span class="colour-2"></span>
+          <span class="colour-3"></span>
+          <span class="colour-4"></span>
+          <span class="colour-5"></span>
+        </div>
+      </div>
+
+      <!-------------- BACKGROUND COLOURS ----------------->
+      <div class="background">
+        <h4>Background</h4>
+        <div class="choose-bg">
+          <div class="bg-1 active">
+            <span></span>
+            <h5 for="bg-1">Light</h5>
+          </div>
+
+          <div class="bg-2">
+            <span></span>
+            <h5>Dim</h5>
+          </div>
+
+          <div class="bg-3">
+            <span></span>
+            <h5 for="bg-3">Lights Out</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
