@@ -9,13 +9,17 @@ body {
   overflow: hidden;
 }
 
-.background {
-  width: 100%;
-  min-height: 100vh;
-  background: url('https://c4.wallpaperflare.com/wallpaper/927/247/737/pokemon-nature-pikachu-charmander-wallpaper-preview.jpg') no-repeat;
+#animated-bg {
+ background: url('https://i.imgur.com/qO6LYDd.gif') no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  filter: blur(3px);
   transform: scale(1.5);
 }
 
@@ -26,7 +30,7 @@ body {
   transform: translate(-50%, -50%);
   width: 75%;
   height: 550px;
-  background: url('https://c4.wallpaperflare.com/wallpaper/927/247/737/pokemon-nature-pikachu-charmander-wallpaper-preview.jpg') no-repeat;
+  background: url('https://i.imgur.com/qO6LYDd.gif') no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -38,7 +42,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
@@ -165,3 +169,30 @@ body {
   text-align: center;
   margin-top: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+
+  .text-sci h2 {
+    font-size: 1.5rem;
+  }
+  
+  .logreg-box {
+    width: 90%;
+  }
+
+  .form-box h2 {
+    font-size: 24px;
+  }
+
+  .input-box input[type="text"],
+  .input-box input[type="password"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+}
+
