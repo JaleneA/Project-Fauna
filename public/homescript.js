@@ -109,6 +109,59 @@ fetch('https://nodejs-fauna.jalenea.repl.co/')
 
 
 //------------------- FUNCTIONALITY ---------------//
+
+// ------------- HASHTAGS  --------------- //
+const categories = document.querySelectorAll('.category h6');
+const hashtags = document.querySelectorAll('.hashtag');
+const categoryLinks = document.querySelectorAll('.right .category h6');
+const containers = document.querySelectorAll('.hashtag-container');
+
+function showHashtags(category) {
+  containers.forEach(container => {
+    if (container.classList.contains(category)) {
+      container.classList.add('active');
+    } else {
+      container.classList.remove('active');
+    }
+  });
+}
+
+categories.forEach(category => {
+  category.addEventListener('click', () => {
+    const activeCategory = document.querySelector('.category .active');
+    if (activeCategory !== category) {
+      activeCategory.classList.remove('active');
+      category.classList.add('active');
+      hashtags.forEach(hashtag => {
+        if (hashtag.dataset.category === category.dataset.category) {
+          hashtag.classList.add('active');
+        } else {
+          hashtag.classList.remove('active');
+        }
+      });
+    }
+    showHashtags(category.dataset.category);
+  });
+});
+
+categoryLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const category = link.dataset.category;
+    containers.forEach(container => {
+      if (container.classList.contains(category)) {
+        container.classList.add('active');
+      } else {
+        container.classList.remove('active');
+      }
+    });
+    categoryLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+    link.classList.add('active');
+  });
+});
+// -------------  HASHTAGS  --------------------  //
+
 // SIDEBAR //
 const menuItems = document.querySelectorAll('.menu-item');
 
