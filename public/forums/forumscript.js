@@ -62,7 +62,7 @@ signOutButton.addEventListener("click", () => {
   // Clear the user's authentication token
   localStorage.removeItem("authToken");
   // Redirect the user to the sign-in page
-  window.location.href = "https://Fauna-Sign-In.jalenea.repl.co/index.html";
+  window.location.href = "https://fauna-animal-kingdom.netlify.app/";
 });
 
 // SIDEBAR //
