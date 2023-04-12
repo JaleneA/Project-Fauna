@@ -23,7 +23,7 @@ signOutButton.addEventListener("click", () => {
 
   localStorage.removeItem("authToken");
 
-  window.location.href = "https://Fauna-Sign-In.jalenea.repl.co/index.html";
+  window.location.href = "https://fauna-animal-kingdom.netlify.app/";
 });
 
 // FRONT END: API IMPLEMENTATION - Instagram's Basic Display API //
