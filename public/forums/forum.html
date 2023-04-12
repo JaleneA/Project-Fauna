@@ -23,10 +23,10 @@
         <input type="search" placeholder="Search for your beloved animals">
       </div>
       <button class="btn btn-primary" id="sign-out-button">Sign Out</button>
-
     </div>
   </nav>
-  <!---------------------------- MAIN -------------------->
+
+ <!---------------------------- MAIN -------------------->
   <main>
     <div class="container">
       <!------------ LEFT -------------->
@@ -35,7 +35,7 @@
             Discussion Forums
         </a>
 
-        <!---------------------- SIDEBAR ------------------>
+    <!---------------------- SIDEBAR ------------------>
         <div class="sidebar">
           <a href="/public/home.html" class="menu-item">
             <span><i class="uil uil-house-user"></i></span>
@@ -50,42 +50,46 @@
           <a class="menu-item" id="notifications">
             <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
             <h3>Notifications</h3>
-            <!---- POPUP ---->
+            <!------------- NOTIFICATIONS POPUP ---------------->
             <div class="notifications-popup">
               <div>
                 <div class="profile-photo">
-                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
+                  <img
+                    src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
                 </div>
-                <div class="notification body">
-                  <b>Name</b> accepted your friend request
-                  <small class="text-muted"> 2 DAYS AGO</small>
-                </div>
-              </div>
-              <div>
-                <div class="profile-photo">
-                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
-                </div>
-                <div class="notification body">
-                  <b>Name</b> accepted your friend request
-                  <small class="text-muted"> 2 DAYS AGO</small>
+                <div class="notification-body">
+                  <b>Fauna</b> sent you a welcome message!
+                  <small class="text-muted">JUST NOW</small>
                 </div>
               </div>
               <div>
                 <div class="profile-photo">
-                  <img src="https://outwardhound.com/furtropolis/wp-content/uploads/2020/03/Doggo-Lingo-Post.jpg">
+                  <img
+                    src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
                 </div>
-                <div class="notification body">
-                  <b>Name</b> accepted your friend request
-                  <small class="text-muted"> 2 DAYS AGO</small>
+                <div class="notification-body">
+                  <b>azeemtherott</b> added to their story!
+                  <small class="text-muted"> JUST NOW</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
+                </div>
+                <div class="notification-body">
+                  <b>azeemtherott</b> followed you!
+                  <small class="text-muted"> JUST NOW</small>
                 </div>
               </div>
             </div>
           </a>
-
-          <a href="forum.html" class="menu-item active">
+          <!------------- NOTIFICATIONS POPUP END ---------------->
+                    <a href="forum.html" class="menu-item active">
             <span><i class="uil uil-comment-alt-dots"></i></span>
             <h3>Discussions</h3>
           </a>
+
 
           <a class="menu-item" id="messages-notifications">
             <span><i class="uil uil-envelope-alt"><small class="notification-count">5</small></i></span>
@@ -105,6 +109,7 @@
         <!--------------- END OF SIDEBAR --------------------->
         <label for="create-post" class="btn btn-primary">Create Post</label>
       </div>
+
       <!------------ MIDDLE -------------->
       <div class="middle">
         <form id="message-form">
@@ -116,13 +121,12 @@
         </form>
         <div id="message-container"></div>
       </div>
-
-
       <!------------ RIGHT -------------->
       <div class="right">
         <div class="hashtags">
           <div class="heading">
-            <h4>#Hashtags</h4><i class="uil uil-filter"></i>
+            <h4>Popular Hashtags</h4>
+            <i class="uil uil-filter"></i>
           </div>
           <!---------- SEARCH BAR --------------->
           <div class="search-bar">
@@ -130,59 +134,91 @@
             <input type="search" placeholder="Search hashtags" id="hashtag-search">
           </div>
           <!--------------------- HASHTAGS CATEGORY ---------------->
-          <div class="category">
-            <h6 class="active">Mammals</h6>
-            <h6>Birds</h6>
-            <h6>Reptiles</h6>
-          </div>
-          <!------------ HASHTAG ---------------->
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#CATS</p>
-          </div>
-          <div class="hashtag">
-            <p>#HORSES</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-          <div class="hashtag">
-            <p>#DOGS</p>
-          </div>
-        </div>
-        <!--------- MAMMALS END ------------->
-
-        <!----------- BIRDS ---------------->
-        <div class="birds-category">
-          <div class="category-container">
-            <div class="hashtag">
-              <p>#PARROTS</p>
+          <!--- wanted to use an animal API to generate this, but couldn't find any that either didn't require a token or didn't offer simple name display -->
+          <div class="categories">
+            <div class="category">
+              <h6 class="active" data-category="mammals">Mammals</h6>
+              <h6 data-category="birds">Birds</h6>
+              <h6 data-category="reptiles">Insects</h6>
             </div>
-          </div>
-        </div>
-        <!----------- BIRDS ---------------->
-        <div class="reptiles-category">
-          <div class="category-container">
-            <div class="hashtag">
-              <p>#SNAKES</p>
+            <div class="hashtag-container mammals">
+              <div class="hashtag active" data-category="mammals">
+                <p>#Dogs</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Cats</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Guniea Pigs</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Rabbits</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Hamsters</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Ferrets</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Hedgehogs</p>
+              </div>
+              <div class="hashtag active" data-category="mammals">
+                <p>#Squirrels</p>
+              </div>
+            </div>
+
+            <div class="hashtag-container birds">
+              <div class="hashtag" data-category="birds">
+                <p>#Ducks</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Cockatiels</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Macaws</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Finches</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Pigeons</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Cockatoos</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Chickens</p>
+              </div>
+              <div class="hashtag" data-category="birds">
+                <p>#Budgerigars</p>
+              </div>
+            </div>
+
+            <div class="hashtag-container reptiles">
+              <div class="hashtag" data-category="reptiles">
+                <p>#Beetles</p>
+              </div>
+              <div class="hashtag" data-category="reptiles">
+                <p>#Scorpions</p>
+              </div>
+              <div class="hashtag" data-category="reptiles">
+                <p>#Ladybugs</p>
+              </div>
+              <div class="hashtag" data-category="reptiles">
+                <p>#Centipedes</p>
+              </div>
+              <div class="hashtag" data-category="reptiles">
+                <p>#Tarantula Spiders</p>
+              </div>
+              <div class="hashtag" data-category="reptiles">
+                <p>#Praying Mantises</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </main>
   <!--------------- THEME CUSTOMIZATION -------------------------->
   <div class="customize-theme">
@@ -240,7 +276,7 @@
       </div>
     </div>
   </div>
-  <script src="forumscript.js"></script>
-</body>
 
+<script src="forumscript.js"></script>
+</body>
 </html>
