@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
-  <title>Fauna - Discussions</title>
+  <link rel="shortcut icon" href="assets/favicon.ico.png" type="image/x-icon">
+  <title>Fauna - The Animal Media</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
-<link href="forumstyle.css" rel="stylesheet" type="text/css" />
-
+  <link href="forumstyle.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -32,21 +32,12 @@
       <!------------ LEFT -------------->
       <div class="left">
         <a class="profile">
-          <div class="profile-photo">
-            <img src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
-          </div>
-          <div class="handle">
-            <h4>Hello ʕᵔᴥᵔ○ʔ</h4>
-            <h4 id="username-display"></h4>
-            <p class="text-muted">
-              <span id="username">@username</span>
-            </p>
-          </div>
+            Discussion Forums
         </a>
 
         <!---------------------- SIDEBAR ------------------>
         <div class="sidebar">
-          <a href="public/index.html" class="menu-item active">
+          <a href="public/index.html" class="menu-item">
             <span><i class="uil uil-house-user"></i></span>
             <h3>Home</h3>
           </a>
@@ -91,11 +82,10 @@
             </div>
           </a>
 
-          <a href="forum.html" class="menu-item">
+          <a href="forum.html" class="menu-item active">
             <span><i class="uil uil-comment-alt-dots"></i></span>
             <h3>Discussions</h3>
           </a>
-
 
           <a class="menu-item" id="messages-notifications">
             <span><i class="uil uil-envelope-alt"><small class="notification-count">5</small></i></span>
@@ -117,94 +107,16 @@
       </div>
       <!------------ MIDDLE -------------->
       <div class="middle">
-
-        <!--------- STORIES ----------->
-        <div class="stories">
-          <div class="story">
-            <div class="profile-photo">
-              <img
-                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80">
-            </div>
-            <p class="name">Your Story</p>
-          </div>
-
-          <div class="story">
-            <div class="profile-photo">
-              <img
-                src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8zMTIyNjAwNi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY5OTY2MTQ4MH0.1PVYDbllnhhnjkRnR3Q61Ql01x-FwzMD54iezo4vcKM/img.jpg?width=980">
-            </div>
-            <p class="name">Pikachu</p>
-          </div>
-
-          <div class="story">
-            <div class="profile-photo">
-              <img
-                src="https://images.immediate.co.uk/production/volatile/sites/4/2022/06/GettyImages-1282300125-2f3f54a.jpg?quality=90&resize=768,574">
-            </div>
-            <p class="name">Elmo</p>
-          </div>
-
-          <div class="story">
-            <div class="profile-photo">
-              <img
-                src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-            </div>
-            <p class="name">Piplup</p>
-          </div>
-
-          <div class="story">
-            <div class="profile-photo">
-              <img src="https://ontariospca.ca/wp-content/uploads/2021/04/pexels-zen-chung-5749136.jpg">
-            </div>
-            <p class="name">Person4</p>
-          </div>
-
-          <div class="story">
-            <div class="profile-photo">
-              <img
-                src="https://th-thumbnailer.cdn-si-edu.com/HPJknxrd4UYT-wjN0a32vyr-0cQ=/1072x720/filters:no_upscale():focal(3008x2005:3009x2006)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/6b/c3/6bc305cb-95dd-4e22-b45b-108c6e218200/gettyimages-1144833913.jpg">
-            </div>
-            <p class="name">Person5</p>
-          </div>
-        </div>
-        <!------------ STORIES END --------->
-
-        <!----------- TO POST -------------->
-
-        <div class="create-post">
-          <input type="text" class="search-bar" placeholder="Have something to share?">
-          <label for="post-image" class="custom-file-upload" id="userpost">
-            <input type="file" name="post-image" id="post-image">
-            <i class="uil uil-plus-circle"></i>
-          </label>
-
-
-          <div id="upload-modal" class="popup">
-            <div class="popup-content">
-              <span class="close">&times;</span>
-              <div class="image-container">
-                <h2>Create new post</h2>
-                <img id="uploaded-image" src="" alt="">
-                <div class="caption-bar">
-                  <input type="text" placeholder="Add A Caption">
-                </div>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Post</button>
-        </div>
-
-        <!------------------- END TO POST ------------------------->
-
-        <!--------------- FEEDS - USING INSTAGRAMS BASIC DISPLAY API ------------------->
-        <div class="feeds">
-          <!--------------- FEED ------------------->
-          <div class="feed" id="media">
-          </div>
-          <!-------------- FEED END ----------------------->
-        </div>
-        <!-------------- MIDDLE END ----------------------->
+        <form id="message-form">
+          <label for="title-input">Title:</label>
+          <input type="text" id="title-input" name="title-input" placeholder="Add a title">
+          <label for="message-input">Message:</label>
+          <input type="text" id="message-input" name="message-input" placeholder="Type your message here...">
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+        <div id="message-container"></div>
       </div>
+
 
       <!------------ RIGHT -------------->
       <div class="right">
@@ -328,7 +240,6 @@
       </div>
     </div>
   </div>
-
   <script src="forumscript.js"></script>
 </body>
 
