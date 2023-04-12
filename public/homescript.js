@@ -81,7 +81,7 @@ fetch('https://nodejs-fauna.jalenea.repl.co/')
     </div>
 
     <div class="caption">
-      <p><b>${username}</b> ${caption} <span class="hashtag"> #dogs</span></p>
+      <p><b>${username}</b> ${caption}</p>
     </div>
     <div class="comments text-muted">View all comments</div>
   </div>
