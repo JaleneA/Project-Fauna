@@ -1,3 +1,31 @@
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
+
+document.getElementById('username').textContent = username;
+document.getElementById('username-display').textContent = username;
+
+const postImageInput = document.getElementById('post-image');
+const postImagePreview = document.getElementById('post-image-preview');
+
+postImageInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', (event) => {
+    postImagePreview.src = event.target.result;
+  });
+
+  reader.readAsDataURL(file);
+});
+
+const signOutButton = document.getElementById("sign-out-button");
+signOutButton.addEventListener("click", () => {
+
+  localStorage.removeItem("authToken");
+
+  window.location.href = "https://Fauna-Sign-In.jalenea.repl.co/index.html";
+});
+
 // FRONT END: API IMPLEMENTATION - Instagram's Basic Display API //
 // Retrieve media data and render feeds on page
 fetch('https://nodejs-fauna.jalenea.repl.co/')
@@ -9,8 +37,6 @@ fetch('https://nodejs-fauna.jalenea.repl.co/')
     // Retrieve media details for each ID and render feed
     mediaIds.forEach((mediaId, index) => {
       const time = Math.floor(Math.random() * 59) + 1;
-
-
 
       fetch(`https://graph.instagram.com/${mediaId}?fields=id,media_type,media_url,thumbnail_url,username&access_token=${accessToken}`)
 
@@ -95,6 +121,27 @@ const colourPalette = document.querySelectorAll('.choose-colour span');
 const Bg1 = document.querySelector('.bg-1');
 const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
+
+// CREATE POST //
+const uploadModal = document.querySelector('#upload-modal');
+const uploadButton = document.querySelector('#userpost');
+const closeUploadModal = document.querySelector('.close');
+const uploadedImage = document.querySelector('#uploaded-image');
+
+uploadButton.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => {
+    uploadedImage.src = reader.result;
+    uploadModal.style.display = 'block';
+  };
+});
+
+closeUploadModal.addEventListener('click', () => {
+  uploadedImage.src = '';
+  uploadModal.style.display = 'none';
+});
 
 // Remove Active Class From All Menu Items //
 const changeActiveItem = () => {
@@ -265,6 +312,4 @@ Bg3.addEventListener('click', () => {
   Bg2.classList.remove('active');
   changeBG();
 })
-
-
 // FIN //
