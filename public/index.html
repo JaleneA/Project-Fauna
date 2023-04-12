@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
-  <title>Fauna</title>
-  <!-- ICONSCOUT CDN -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <title>Fauna - The Animal Media</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -22,13 +21,8 @@
         <i class="uil uil-search"></i>
         <input type="search" placeholder="Search for your beloved animals">
       </div>
+      <button class="btn btn-primary" id="sign-out-button">Sign Out</button>
 
-      <div class="create">
-        <label class="btn btn-primary" for="create-post">Create</label>
-        <div class="profile-photo">
-          <img src="">
-        </div>
-      </div>
     </div>
   </nav>
   <!---------------------------- MAIN -------------------->
@@ -38,20 +32,20 @@
       <div class="left">
         <a class="profile">
           <div class="profile-photo">
-            <img
-              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80">
+            <img src="https://2img.net/h/lh3.ggpht.com/_S0f-AWxKVdM/TByTpLKmRbI/AAAAAAAAMlo/vqnGXwjWHT0/pikachuy.png">
           </div>
           <div class="handle">
-            <h4>Username</h4>
+            <h4>Hello ʕᵔᴥᵔ○ʔ</h4>
+            <h4 id="username-display"></h4>
             <p class="text-muted">
-              @username
+              <span id="username">@username</span>
             </p>
           </div>
         </a>
 
         <!---------------------- SIDEBAR ------------------>
         <div class="sidebar">
-          <a class="menu-item active">
+          <a href="index.html" class="menu-item active">
             <span><i class="uil uil-house-user"></i></span>
             <h3>Home</h3>
           </a>
@@ -96,10 +90,11 @@
             </div>
           </a>
 
-          <a class="menu-item">
+          <a href="forum.html" class="menu-item">
             <span><i class="uil uil-comment-alt-dots"></i></span>
             <h3>Discussions</h3>
           </a>
+
 
           <a class="menu-item" id="messages-notifications">
             <span><i class="uil uil-envelope-alt"><small class="notification-count">5</small></i></span>
@@ -137,7 +132,7 @@
               <img
                 src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8zMTIyNjAwNi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY5OTY2MTQ4MH0.1PVYDbllnhhnjkRnR3Q61Ql01x-FwzMD54iezo4vcKM/img.jpg?width=980">
             </div>
-            <p class="name">Person1</p>
+            <p class="name">Pikachu</p>
           </div>
 
           <div class="story">
@@ -145,7 +140,7 @@
               <img
                 src="https://images.immediate.co.uk/production/volatile/sites/4/2022/06/GettyImages-1282300125-2f3f54a.jpg?quality=90&resize=768,574">
             </div>
-            <p class="name">Person2</p>
+            <p class="name">Elmo</p>
           </div>
 
           <div class="story">
@@ -153,7 +148,7 @@
               <img
                 src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
             </div>
-            <p class="name">Person3</p>
+            <p class="name">Piplup</p>
           </div>
 
           <div class="story">
@@ -174,14 +169,30 @@
         <!------------ STORIES END --------->
 
         <!----------- TO POST -------------->
-        <form class="create-post">
-          <div class="profile-photo">
-            <img
-              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80">
+
+        <div class="create-post">
+          <input type="text" class="search-bar" placeholder="Have something to share?">
+          <label for="post-image" class="custom-file-upload" id="userpost">
+            <input type="file" name="post-image" id="post-image">
+            <i class="uil uil-plus-circle"></i>
+          </label>
+
+
+          <div id="upload-modal" class="popup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <div class="image-container">
+                <h2>Create new post</h2>
+                <img id="uploaded-image" src="" alt="">
+                <div class="caption-bar">
+                  <input type="text" placeholder="Add A Caption">
+                </div>
+              </div>
+            </div>
           </div>
-          <input type="text" placeholder="Anything to share (Name)?" id="create-post">
-          <input type="submit" value="Post" class="btn btn-primary">
-        </form>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+
         <!------------------- END TO POST ------------------------->
 
         <!--------------- FEEDS - USING INSTAGRAMS BASIC DISPLAY API ------------------->
@@ -193,7 +204,6 @@
         </div>
         <!-------------- MIDDLE END ----------------------->
       </div>
-
 
       <!------------ RIGHT -------------->
       <div class="right">
@@ -317,6 +327,7 @@
       </div>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 
