@@ -3,7 +3,7 @@ const titleInput = document.querySelector('#title-input');
 const messageInput = document.querySelector('#message-input');
 const messageContainer = document.querySelector('#message-container');
 
-// Array of messages
+// Wanted to use an API to generate forum discussions about animals but couldn't find any that didn't require an access token //
 const messages = [
   { username: 'kingpengu12', title: 'Why Are Stray Dogs Following Me?', message: 'On my way home a dog would see me, then start following me straight till my house. This happened 3 times already... Any dog lovers know why?', timestamp: '2023-04-13T10:00:00Z' },
   { username: 'justlikeanimalssss', title: 'I love my cat! I trimmed her nails for the first time and she just stared at me.', message: 'I’ve heard horror stories of trimming cats nails. My first time, quite uneventful, but I’m happy with that!!!', timestamp: '2023-04-09T2:00:00Z' },
@@ -12,10 +12,9 @@ const messages = [
    timestamp: '2023-04-05T12:00:00Z' }
 ];
 
-// Display messages on page load
 messages.forEach(message => {
   const messageElement = document.createElement('div');
-  messageElement.classList.add('message', 'message-card'); // Add the message-card class here
+  messageElement.classList.add('message', 'message-card');
   messageElement.innerHTML = `
     <div class="message-header">
       <h3 class="message-title">${message.title}</h3>
@@ -28,7 +27,6 @@ messages.forEach(message => {
   `;
   messageContainer.appendChild(messageElement);
 });
-
 
 messageForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -61,9 +59,7 @@ messageForm.addEventListener('submit', (e) => {
 
 const signOutButton = document.getElementById("sign-out-button");
 signOutButton.addEventListener("click", () => {
-  // Clear the user's authentication token
   localStorage.removeItem("authToken");
-  // Redirect the user to the sign-in page
   window.location.href = "https://fauna-animal-kingdom.netlify.app/";
 });
 
@@ -247,7 +243,6 @@ colourPalette.forEach(colour => {
     }
     colour.classList.add('active');
 
-
     root.style.setProperty('--primary-color-hue', primaryHue);
   })
 })
@@ -274,7 +269,6 @@ Bg1.addEventListener('click', () => {
   // remove customized changes from local storage //
   window.location.reload();
 });
-
 
 Bg2.addEventListener('click', () => {
   lightColorLightness = '15%';
