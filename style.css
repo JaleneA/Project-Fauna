@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -170,29 +172,55 @@ body {
   margin-top: 25px;
 }
 
-@media only screen and (max-width: 600px) {
+.input-box {
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-  .text-sci h2 {
-    font-size: 1.5rem;
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {  
+  .container {
+    width: 100%;
+    height: 100%;
   }
-  
-  .logreg-box {
-    width: 90%;
+
+  .container .content {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 300px;
+  }
+
+  .container .logreg-box {
+    margin-top: 320px;
+    width: 100%;
+    height: 50%;
+  }
+
+  .logreg-box .form-box {
+    width: 100%;
   }
 
   .form-box h2 {
     font-size: 24px;
   }
 
-  .input-box input[type="text"],
-  .input-box input[type="password"] {
-    font-size: 16px;
-    padding: 12px;
+  .content .logo {
+    display: none;
+}
+
+  .input-box {
+    width: 100%;
   }
 
   .btn {
-    font-size: 18px;
-    padding: 12px 30px;
+    width: 100%;
   }
-}
 
+}
