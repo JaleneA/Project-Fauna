@@ -6,8 +6,8 @@ const messageContainer = document.querySelector('#message-container');
 // Wanted to use an API to generate forum discussions about animals but couldn't find any that didn't require an access token //
 const messages = [
   { username: 'kingpengu12', title: 'Why Are Stray Dogs Following Me?', message: 'On my way home a dog would see me, then start following me straight till my house. This happened 3 times already... Any dog lovers know why?', timestamp: '2023-04-13T10:00:00Z' },
-  { username: 'justlikeanimalssss', title: 'I love my cat! I trimmed her nails for the first time and she just stared at me.', message: 'I’ve heard horror stories of trimming cats nails. My first time, quite uneventful, but I’m happy with that!!!', timestamp: '2023-04-09T2:00:00Z' },
-  { username: 'pikapika', title: 'Have you ever crossed a skunk?', message: 'Did it spray you? Whats the story of the encounter?', timestamp: '2022-04-12T5:00:00Z' },
+  { username: 'justlikeanimalssss', title: 'I love my cat! I trimmed her nails for the first time and she just stared at me.', message: 'I’ve heard horror stories of trimming cats nails. My first time, quite uneventful, but I’m happy with that!!!', timestamp: '2023-04-13T14:30:00Z' },
+  { username: 'pikapika', title: 'Have you ever crossed a skunk?', message: 'Did it spray you? Whats the story of the encounter?', timestamp: '2023-04-11T12:30:00Z' },
   { username: 'sekiro_borne', title: 'How likely is it that my pets know each others names?', message: 'All three of my pets (three cats), respond to their own names. Its pretty obvious by their body language that they know when theyre being called. One cat in particular, Monster - will really go out of her way to make eye contact and purr when I call her. But, how likely is it that they know each others names?.', 
    timestamp: '2023-04-05T12:00:00Z' }
 ];
