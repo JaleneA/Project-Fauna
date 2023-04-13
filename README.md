@@ -1,4 +1,6 @@
-# Project-Fauna ![fauna_logo](favicon.png)
+# Project-Fauna  
+![fauna_logo](favicon.png)
+
 INFO1601 Project 2023 - Social Media Client
 
 Application Link: https://fauna-animal-kingdom.netlify.app/
@@ -6,5 +8,3 @@ Application Link: https://fauna-animal-kingdom.netlify.app/
 
 Fauna brought to you by 
 - Iteration ++
-
-![fauna_logo](favicon.png)
