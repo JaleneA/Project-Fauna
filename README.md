@@ -6,5 +6,5 @@
 Application Link: https://fauna-animal-kingdom.netlify.app/
 - Courtesy of Netlify
 
-_Fauna brought to you by 
+_Fauna brought to you by_
 - Iteration ++
