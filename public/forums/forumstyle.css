@@ -305,7 +305,7 @@ main .container .left .profile {
 .middle #message-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   margin-top: 20px;
 }
 
@@ -327,6 +327,11 @@ main .container .left .profile {
  background: var(--color-light);
   border-radius: 5px;
   min-height: 200px;
+}
+
+.middle button {
+  display: block;
+  margin: auto;
 }
 
 /* --------------------------- RIGHT ---------------- */ 
@@ -451,7 +456,7 @@ category {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
-  box-shadow: 0 0 1rem var(--color-primary);
+  box-shadow: 0 0 1rem var(--color-primary);  
 }
 
 /* -------------- FONT SIZE ------------- */ 
@@ -615,8 +620,6 @@ category {
   .customize-theme .card {
     width: 80vw;
   }
-  
-}
 
 /* MEDIA QUERIES FOR PHONES & SMALL TABLETS */ 
 @media screen and (max-width:  992px) {
@@ -624,41 +627,117 @@ category {
     display: none;
   }
 
-  main .container {
-    grid-template-columns: 0 auto 5rem;
-    gap: 0;
+  nav .container {
+     border-bottom: 20px solid var(--color-primary);
+    width: 100%;
+    padding-bottom: 0.3rem;
   }
-
-  main .container .left {
-    grid-column: 3/4;
+  
+    main .container .left {
+    grid-column: 1/2;
+    grid-row: 1/2;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    top: 2.5rem;
+    margin-top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
   }
 
-  /* ----------- POPUP --------------- */
-  .left .notifications-popup {
-    position: absolute;
-    left: -20rem;
-    width: 20rem;
-  }
+  .middle button {
+  display: block;
+  margin: auto;
+}
 
-   .left .notifications-popup::before {
-    position: absolute;
-    top: 1.3rem;
-    left: calc(20rem - 0.6rem);
-    display: block;
-  }
+  .sidebar {
+     border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: row;
+    padding: 0;
+  margin: 0;
+  border: none;
+    justify-content: space-evenly;
+    border-top: 2px solid var(--color-primary);
+}
 
+  .left .sidebar .active::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: none;
+}
+
+  .left .sidebar .active {
+  background: none;
+}
+
+ .left .notifications-popup {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 20rem;
+}
+
+.left .notifications-popup::before {
+  position: absolute;
+  top: -0.6rem;
+  left: 1.3rem;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0.6rem 0.6rem 0.6rem;
+  border-color: transparent transparent #fff transparent;
+}
+ 
   main .container .middle {
-    grid-column: 1/3;
+    grid-column: 1/-1;
   }
 
-  main .container .right {
-    display: none;
+.middle #message-form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-self: center;
+}
+  .middle #message-form .form-group {
+  margin-bottom: 1rem;
+}
+
+
+.middle #message-form .form-group input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.middle #message-form label {
+  width: 100%;
+}
+.middle button {
+  display: block;
+  margin: auto;
+}
+
+main .container .right {
+  display: none;
+}
+
+ .customize-theme .card {
+    width: 70%;
+    padding: 0.5rem;
   }
 
-    .customize-theme .card {
-    width: 92vw;
+  .customize-theme .choose-bg {
+    flex-wrap: wrap;
+  }
+  
+  .customize-theme .choose-bg > div {
+    width: calc(50% - 0.75rem);
+    margin-bottom: 1rem;
   }
 }
