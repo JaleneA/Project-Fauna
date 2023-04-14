@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
-  <link href="homestyle.css" rel="stylesheet" type="text/css" />
+ <link href="homestyle.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 
         <!---------------------- SIDEBAR ------------------>
         <div class="sidebar">
-          <a href="home.html" class="menu-item active">
+           <a href="home.html" class="menu-item active">
             <span><i class="uil uil-house-user"></i></span>
             <h3>Home</h3>
           </a>
@@ -97,7 +97,7 @@
           </a>
           <!------------- NOTIFICATIONS POPUP END ---------------->
 
-          <a href="forums/forum.html" class="menu-item">
+         <a href="forums/forum.html" class="menu-item">
             <span><i class="uil uil-comment-alt-dots"></i></span>
             <h3>Discussions</h3>
           </a>
@@ -182,11 +182,10 @@
             <div class="popup-content">
               <span class="close">&times;</span>
               <div class="image-container">
-                <h2>Create new post</h2>
                 <img id="uploaded-image" src="" alt="">
-                <div class="caption-bar">
-                  <input type="text" placeholder="Add A Caption">
-                </div>
+                <textarea id="message-input" name="message-input" placeholder="Add A Caption" rows="10"
+                  cols="90"></textarea>
+                <button type="submit" class="btn btn-primary">Post</button>
               </div>
             </div>
           </div>
@@ -194,7 +193,6 @@
         </div>
 
         <!------------------- END TO POST ------------------------->
-
         <!--------------- FEEDS - USING INSTAGRAMS BASIC DISPLAY API ------------------->
         <div class="feeds">
           <!--------------- FEED ------------------->
@@ -309,7 +307,7 @@
   <div class="customize-theme">
     <div class="card">
       <h2>Purrfect Your View</h2>
-      <p class="text-muted">Manage your font size, colour, and background.</p>
+      <p class="text-muted">Manage your font size, colour, and background!</p>
 
       <!--------------------- FONT SIZES ------------------------->
       <div class="font-size">
@@ -361,6 +359,7 @@
       </div>
     </div>
   </div>
-   <script src="homescript.js"></script>
+  <script src="homescript.js"></script>
 </body>
+
 </html>
