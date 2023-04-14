@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <title>Fauna - Discussions</title>
-  <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="icon" type="image/png" href="../../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
  <link href="forumstyle.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 
         <!---------------------- SIDEBAR ------------------>
         <div class="sidebar">
-          <a href="../home.html" class="menu-item">
+   <a href="../home.html" class="menu-item">
             <span><i class="uil uil-house-user"></i></span>
             <h3>Home</h3>
           </a>
@@ -113,12 +114,11 @@
       <div class="middle">
         <form id="message-form">
           <div class="form-group">
-            <label for="title-input">Title:</label>
             <input type="text" id="title-input" name="title-input" placeholder="Add a title">
           </div>
           <div class="form-group">
-            <label for="message-input">Message:</label>
-            <input type="text" id="message-input" name="message-input" placeholder="Type your message here...">
+            <textarea id="message-input" name="message-input" placeholder="Type your message here..." rows="10"
+              cols="90"></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -281,4 +281,5 @@
   </div>
   <script src="forumscript.js"></script>
 </body>
+
 </html>
