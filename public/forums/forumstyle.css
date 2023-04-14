@@ -310,7 +310,6 @@ main .container .left .profile {
 }
 
 .middle #message-form input[type="text"], textarea {
-    background-color: var(--color-light);
    box-shadow: 0 0 0.5rem var(--color-primary);
   }
 
