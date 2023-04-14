@@ -60,7 +60,7 @@ messageForm.addEventListener('submit', (e) => {
 const signOutButton = document.getElementById("sign-out-button");
 signOutButton.addEventListener("click", () => {
   localStorage.removeItem("authToken");
-  window.location.href = "https://fauna-animal-kingdom.netlify.app/";
+  window.location.href = "https://fauna-animal-media.netlify.app/";
 });
 
 // -------------- HASTAGS --------- //
